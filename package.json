@@ -2,25 +2,31 @@
   "name": "pigpen",
   "version": "0.1.0",
   "description": "a desktop utility for working with encrypted files",
-  "main": "dist/main.js",
+  "main": "./dist/main.js",
   "scripts": {
     "test": "exit 0",
     "build": "tsc",
-    "app": "npm run build && electron ."
+    "pack": "npm run build && webpack",
+    "app": "npm run pack && electron ."
   },
   "author": "Dan Luhring",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/luhring/pigpen"
   },
   "dependencies": {
     "electron": "^1.7.5",
-    "react": "^15.6.1"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "webpack": "^3.5.4"
   },
   "devDependencies": {
     "@types/node": "^8.0.20",
     "@types/react": "^16.0.2",
+    "@types/react-dom": "^15.5.2",
+    "awesome-typescript-loader": "^3.2.2",
+    "source-map-loader": "^0.2.1",
     "typescript": "^2.4.2"
   }
 }
