@@ -3,10 +3,6 @@
 // after https://github.com/webpack/webpack/issues/3460 will be resolved.
 const { CheckerPlugin } = require('awesome-typescript-loader')
 
-const natives = Object.keys(process.binding("natives"))
-  .filter(nativeDep => nativeDep[0] !== '_')
-  .map(dep => ({name: dep, version: 'native'}));
-
 module.exports = {
   target: "electron-renderer",
 
