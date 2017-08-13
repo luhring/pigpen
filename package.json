@@ -4,6 +4,7 @@
   "description": "a desktop utility for working with encrypted files",
   "main": "./dist/main.js",
   "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "test": "exit 0",
     "build": "tsc",
     "pack": "npm run build && webpack",
@@ -27,6 +28,7 @@
     "@types/react-dom": "^15.5.2",
     "awesome-typescript-loader": "^3.2.2",
     "source-map-loader": "^0.2.1",
+    "tslint": "^5.6.0",
     "typescript": "^2.4.2"
   }
 }
